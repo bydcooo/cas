@@ -5,7 +5,7 @@ RUN mkdir -p ~/.gradle \
     && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties \
     && echo "org.gradle.configureondemand=true" >> ~/.gradle/gradle.properties \
     && mkdir -p cas-overlay && cd cas-overlay \
-    && curl https://casinit.herokuapp.com/starter.tgz -d "casVersion=6.5.8&bootVersion=2.6.3&dependencies=core-util,support-oauth,support-session-redis,support-rest-authentication,support-qr-authentication,support-otp-mfa-core,support-actions-core,support-actions" | tar -xzvf - \
+    && curl https://casinit.herokuapp.com/starter.tgz -d "casVersion=6.5.8&bootVersion=2.6.3&dependencies=core-util,support-oauth,support-session-redis,support-rest-authentication,support-qr-authentication,support-otp-mfa-core" | tar -xzvf - \
     && chmod 750 ./gradlew \
     && ./gradlew --version;
 
